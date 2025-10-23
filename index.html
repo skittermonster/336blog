@@ -7,6 +7,12 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="background-canvas" aria-hidden="true">
+    <div class="bg-orb bg-orb--one" data-speed="0.2"></div>
+    <div class="bg-orb bg-orb--two" data-speed="0.35"></div>
+    <div class="bg-grid"></div>
+  </div>
+
   <header class="site-header">
     <div class="container header-content">
       <div class="branding">
@@ -23,7 +29,7 @@
   </header>
 
   <main>
-    <section id="overview" class="hero">
+    <section id="overview" class="hero" data-parallax>
       <div class="container hero-content">
         <div class="hero-text">
           <h2>Designing Together</h2>
@@ -37,14 +43,27 @@
             the semester, and keeps an evolving record of the insights that shape our collective
             prototypes. Swap the placeholder content with photos, notes, and reflections as we build.
           </p>
+          <div class="hero-actions">
+            <a class="button-primary" href="#team">Meet the Team</a>
+            <a class="button-ghost" href="#journal">View Journal</a>
+          </div>
         </div>
-        <div class="hero-media placeholder-block">
-          <span>Team Photo Placeholder</span>
+        <div class="hero-media" data-parallax-item data-speed="0.3">
+          <div class="hero-media-frame">
+            <div class="hero-media-glow"></div>
+            <div class="hero-media-content">
+              <span>Team Photo Placeholder</span>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="scroll-indicator" aria-hidden="true">
+        <span class="scroll-indicator-dot"></span>
+        <span>Scroll</span>
       </div>
     </section>
 
-    <section id="team" class="team-section">
+    <section id="team" class="team-section reveal-on-scroll" data-animate>
       <div class="container">
         <header class="section-header">
           <h2>Meet the Team</h2>
@@ -69,18 +88,17 @@
             </p>
           </article>
           <article class="team-card">
-            <h3>Member Three</h3>
+            <h3>Seojin (Lina) Cho</h3>
             <p class="team-role">Visual Communication</p>
             <p>
-              Summarize strengths in visual storytelling, CAD, or presentation. Share how this role
-              supports translating sketches into refined concepts for critique.
+              Sketching, Ideation, and making the physical design.
             </p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="sketches" class="sketches-section">
+    <section id="sketches" class="sketches-section reveal-on-scroll" data-animate>
       <div class="container">
         <header class="section-header">
           <h2>Sketch Collections</h2>
@@ -88,55 +106,85 @@
         </header>
         <div class="sketch-grid">
           <article class="sketch-card">
-            <div class="sketch-media">
+            <button
+              class="sketch-media sketch-trigger"
+              type="button"
+              data-image="im3.png"
+              data-title="Sketch #1"
+              data-description="Documenting prototype iterations, material learnings, and questions to carry into the next build."
+            >
               <img src="im3.png" alt="Composite sketch board showing early explorations and rough outlines">
-            </div>
-            <h3>Early Exploration</h3>
+            </button>
+            <h3>Sketch #1</h3>
             <p>
-              Bundle quick iterations that map initial concepts, material tests, and the questions that surfaced in studio.
+              Documenting prototype iterations, material learnings, and questions to carry into the next build.
             </p>
           </article>
           <article class="sketch-card">
-            <div class="sketch-media">
+            <button
+              class="sketch-media sketch-trigger"
+              type="button"
+              data-image="im2.png"
+              data-title="Sketch #2"
+              data-description="Documenting prototype iterations, material learnings, and questions to carry into the next build."
+            >
               <img src="im2.png" alt="Composite sketch board showing refined directions and annotations">
-            </div>
-            <h3>Refined Directions</h3>
+            </button>
+            <h3>Sketch #2</h3>
             <p>
-              Capture the stronger ideas, annotated learnings, and fabrication cues that steer the next round of prototyping.
+              Documenting prototype iterations, material learnings, and questions to carry into the next build.
             </p>
           </article>
           <article class="sketch-card">
-            <div class="sketch-media">
+            <button
+              class="sketch-media sketch-trigger"
+              type="button"
+              data-image="im4.png"
+              data-title="Sketch #3"
+              data-description="Documenting prototype iterations, material learnings, and questions to carry into the next build."
+            >
               <img src="im4.png" alt="Sketch collage focused on material studies and component details">
-            </div>
-            <h3>Material Studies</h3>
+            </button>
+            <h3>Sketch #3</h3>
             <p>
-              Compile tests of form, joinery, and material behavior that inform how the prototype can be assembled.
+              Documenting prototype iterations, material learnings, and questions to carry into the next build.
             </p>
           </article>
           <article class="sketch-card">
-            <div class="sketch-media">
+            <button
+              class="sketch-media sketch-trigger"
+              type="button"
+              data-image="im5.png"
+              data-title="Sketch #4"
+              data-description="Documenting prototype iterations, material learnings, and questions to carry into the next build."
+            >
               <img src="im5.png" alt="Storyboard sketches mapping user interaction flow">
-            </div>
-            <h3>Interaction Flow</h3>
+            </button>
+            <h3>Sketch #4</h3>
             <p>
-              Map the experience journey, noting how people move through the prototype and where adjustments are needed.
+              Documenting prototype iterations, material learnings, and questions to carry into the next build.
             </p>
           </article>
           <article class="sketch-card">
-            <div class="sketch-media">
+            <button
+              class="sketch-media sketch-trigger"
+              type="button"
+              data-image="im6.png"
+              data-title="Sketch #5"
+              data-description="Documenting prototype iterations, material learnings, and questions to carry into the next build."
+            >
               <img src="im6.png" alt="Detailed sketch sheet breaking down final prototype construction">
-            </div>
-            <h3>Prototype Details</h3>
+            </button>
+            <h3>Sketch #5</h3>
             <p>
-              Highlight final dimensions, key annotations, and assembly cues that prepare us for fabrication.
+              Documenting prototype iterations, material learnings, and questions to carry into the next build.
             </p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="journal" class="journal-section">
+    <section id="journal" class="journal-section reveal-on-scroll" data-animate>
       <div class="container">
         <header class="section-header">
           <h2>Process Journal</h2>
@@ -146,15 +194,13 @@
           <article class="journal-card">
             <h3>Week 01 · Material Explorations</h3>
             <p>
-              Replace with our first-week discoveries: collective research themes, mood boards,
-              and initial tool tests. Capture how we divided responsibilities and early insights.
+              Focus on ideating together, aligning around the right problems, and collecting early insights that will guide our solutions.
             </p>
           </article>
           <article class="journal-card">
             <h3>Week 02 · Prototyping Sprints</h3>
             <p>
-              Track iteration cycles, peer feedback, and next steps. Include questions to bring
-              to studio critiques and photos of evolving models that bridge our sketch series.
+              Capture the sketching blitz, the decisions made for this website, and how the layout supports sharing our build progress.
             </p>
           </article>
           <article class="journal-card">
@@ -168,6 +214,16 @@
     </section>
   </main>
 
+  <div class="sketch-modal" id="sketch-modal" hidden>
+    <div class="sketch-modal-overlay" data-dismiss="true"></div>
+    <div class="sketch-modal-content" role="dialog" aria-modal="true" aria-labelledby="sketch-modal-title">
+      <button class="sketch-modal-close" type="button" aria-label="Close sketch detail" data-dismiss="true">&times;</button>
+      <img src="" alt="" id="sketch-modal-image">
+      <h3 id="sketch-modal-title"></h3>
+      <p id="sketch-modal-description"></p>
+    </div>
+  </div>
+
   <footer class="site-footer">
     <div class="container footer-content">
       <p>© <span id="current-year"></span> IAT 336 Studio Team · Material Design</p>
@@ -178,6 +234,151 @@
   <script>
     // Update footer year without needing extra tooling
     document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    const modal = document.getElementById('sketch-modal');
+    const modalImage = document.getElementById('sketch-modal-image');
+    const modalTitle = document.getElementById('sketch-modal-title');
+    const modalDescription = document.getElementById('sketch-modal-description');
+    const triggers = document.querySelectorAll('.sketch-trigger');
+    const modalCloseButton = modal.querySelector('.sketch-modal-close');
+    const parallaxItems = document.querySelectorAll('[data-parallax-item]');
+    const backgroundOrbs = document.querySelectorAll('.bg-orb[data-speed]');
+    const heroSection = document.querySelector('[data-parallax]');
+    const revealSections = document.querySelectorAll('.reveal-on-scroll');
+    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let lastActiveTrigger = null;
+    let parallaxRaf = null;
+
+    const openSketchModal = (image, title, description, alt) => {
+      lastActiveTrigger = document.activeElement;
+      modalImage.src = image;
+      modalImage.alt = alt || title;
+      modalTitle.textContent = title;
+      modalDescription.textContent = description || "";
+      modal.removeAttribute('hidden');
+      document.body.classList.add('modal-open');
+      modalCloseButton.focus();
+    };
+
+    const closeSketchModal = () => {
+      modal.setAttribute('hidden', 'true');
+      modalImage.src = "";
+      modalTitle.textContent = "";
+      modalDescription.textContent = "";
+      document.body.classList.remove('modal-open');
+      if (lastActiveTrigger && typeof lastActiveTrigger.focus === 'function') {
+        lastActiveTrigger.focus();
+      }
+    };
+
+    triggers.forEach((trigger) => {
+      trigger.addEventListener('click', () => {
+        const image = trigger.getAttribute('data-image');
+        const title = trigger.getAttribute('data-title');
+        const description = trigger.getAttribute('data-description');
+        const altText = trigger.querySelector('img')?.getAttribute('alt');
+        openSketchModal(image, title, description, altText);
+      });
+    });
+
+    modal.addEventListener('click', (event) => {
+      if (event.target.hasAttribute('data-dismiss')) {
+        closeSketchModal();
+      }
+    });
+
+    window.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && !modal.hasAttribute('hidden')) {
+        closeSketchModal();
+      }
+    });
+
+    const updateParallax = () => {
+      if (!heroSection) return;
+      const scrollY = window.scrollY;
+      const heroOffset = heroSection.offsetTop || 0;
+      parallaxItems.forEach((item) => {
+        const speed = parseFloat(item.getAttribute('data-speed')) || 0.2;
+        const offset = (scrollY - heroOffset) * speed * -0.2;
+        item.style.transform = `translate3d(0, ${offset}px, 0)`;
+      });
+      backgroundOrbs.forEach((orb) => {
+        const speed = parseFloat(orb.getAttribute('data-speed')) || 0.2;
+        const offset = scrollY * speed * 0.12;
+        orb.style.setProperty('--parallax-offset', `${offset}px`);
+      });
+    };
+
+    const scheduleParallax = () => {
+      if (motionQuery.matches) return;
+      if (parallaxRaf) return;
+      parallaxRaf = requestAnimationFrame(() => {
+        updateParallax();
+        parallaxRaf = null;
+      });
+    };
+
+    const enableParallax = () => {
+      updateParallax();
+      window.addEventListener('scroll', scheduleParallax, { passive: true });
+      window.addEventListener('resize', updateParallax);
+    };
+
+    const disableParallax = () => {
+      window.removeEventListener('scroll', scheduleParallax);
+      window.removeEventListener('resize', updateParallax);
+      cancelAnimationFrame(parallaxRaf);
+      parallaxRaf = null;
+      parallaxItems.forEach((item) => {
+        item.style.transform = "";
+      });
+      backgroundOrbs.forEach((orb) => {
+        orb.style.setProperty('--parallax-offset', "0px");
+      });
+    };
+
+    if (!motionQuery.matches) {
+      enableParallax();
+    } else {
+      disableParallax();
+    }
+
+    if (typeof motionQuery.addEventListener === 'function') {
+      motionQuery.addEventListener('change', (event) => {
+        if (event.matches) {
+          disableParallax();
+          revealSections.forEach((section) => section.classList.add('is-visible'));
+        } else {
+          enableParallax();
+        }
+      });
+    }
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.2,
+        }
+      );
+
+      revealSections.forEach((section) => {
+        if (motionQuery.matches) {
+          section.classList.add('is-visible');
+        } else {
+          observer.observe(section);
+        }
+      });
+    } else {
+      revealSections.forEach((section) => section.classList.add('is-visible'));
+    }
   </script>
 </body>
 </html>
